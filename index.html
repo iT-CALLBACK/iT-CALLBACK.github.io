@@ -170,9 +170,9 @@
             background-color: #DAA520;
             border-radius: 50%;
             position: absolute;
-            top: 80%;
-            left: 400px;
-            transform: translateY(-50%);
+            top: 50%;
+            left: 80%;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
@@ -183,14 +183,15 @@
         <div id="instructions" class="instruction">
             <h2>Шаг 1: Создать фундамент</h2>
             <p>Напишите HTML и CSS код для фундамента. Используйте элемент
-                <code>&lt;div class="foundation"&gt;&lt;/div&gt;</code>.</p>
+                <code>&lt;div class="foundation"&gt;&lt;/div&gt;</code>.
+            </p>
             <p>CSS должен содержать правила для:</p>
             <ul>
-                <li>Ширина: 100% (чтобы фундамент занимал всю ширину контейнера)</li>
-                <li>Высота: 20px (высота фундамента)</li>
-                <li>Цвет фона: коричневый (чтобы фундамент был коричневым)</li>
-                <li>Позиционирование: absolute (чтобы закрепить фундамент внизу контейнера)</li>
-                <li>Нижний отступ: 0 (чтобы фундамент был внизу контейнера)</li>
+                <li>Ширина: 100%</li>
+                <li>Высота: 20px</li>
+                <li>Цвет фона: коричневый (#8B4513)</li>
+                <li>Позиционирование: absolute</li>
+                <li>Нижний отступ: 0</li>
             </ul>
             <button class="btn btn-secondary" onclick="showHint(1)">Показать помощь</button>
             <button class="btn btn-secondary" onclick="hideHint(1)" style="display:none;">Скрыть помощь</button>
@@ -219,6 +220,10 @@
                 <div class="status"></div>
                 <div>Установить дверь</div>
             </div>
+            <div class="task not-completed" data-task="doorknob">
+                <div class="status"></div>
+                <div>Добавить дверную ручку</div>
+            </div>
         </div>
         <div class="code-area">
             <div class="code-editor">
@@ -241,9 +246,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/htmlmixed/htmlmixed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/css/css.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2
-
-/addon/edit/closetag.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/edit/closetag.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/edit/closebrackets.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/hint/show-hint.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/hint/html-hint.min.js"></script>
@@ -327,14 +330,14 @@
                         <p>Напишите HTML код для стен. Используйте элемент <code>&lt;div class="walls"&gt;&lt;/div&gt;</code>.</p>
                         <p>CSS должен содержать правила для:</p>
                         <ul>
-                            <li>Ширина: 200px (чтобы стены занимали 200 пикселей ширины)</li>
-                            <li>Высота: 200px (высота стен)</li>
-                            <li>Цвет фона: светло-серый (чтобы стены были светло-серыми)</li>
-                            <li>Позиционирование: absolute (чтобы закрепить стены над фундаментом)</li>
-                            <li>Нижний отступ: 20px (чтобы стены были над фундаментом)</li>
-                            <li>Левый отступ: 50% (чтобы центрировать стены)</li>
-                            <li>Трансформация: translateX(-50%) (чтобы центрировать стены по горизонтали)</li>
-                            <li>Граница: 2px solid #000 (чтобы добавить границу)</li>
+                            <li>Ширина: 200px</li>
+                            <li>Высота: 200px</li>
+                            <li>Цвет фона: светло-серый</li>
+                            <li>Позиционирование: absolute</li>
+                            <li>Нижний отступ: 20px</li>
+                            <li>Левый отступ: 50%</li>
+                            <li>Трансформация: translateX(-50%)</li>
+                            <li>Граница: 2px solid #000</li>
                         </ul>
                         <button class="btn btn-secondary" onclick="showHint(2)">Показать помощь</button>
                         <button class="btn btn-secondary" onclick="hideHint(2)" style="display:none;">Скрыть помощь</button>
@@ -356,15 +359,15 @@
                         <p>Напишите HTML код для крыши. Используйте элемент <code>&lt;div class="roof"&gt;&lt;/div&gt;</code>.</p>
                         <p>CSS должен содержать правила для:</p>
                         <ul>
-                            <li>Ширина: 0 (нулевая ширина, потому что мы будем использовать границы)</li>
-                            <li>Высота: 0 (нулевая высота, потому что мы будем использовать границы)</li>
-                            <li>Левая граница: 110px solid transparent (треугольник)</li>
-                            <li>Правая граница: 110px solid transparent (треугольник)</li>
-                            <li>Нижняя граница: 100px solid #A52A2A (чтобы создать красную крышу)</li>
-                            <li>Позиционирование: absolute (чтобы закрепить крышу над стенами)</li>
-                            <li>Верхний отступ: 50px (чтобы крыша была на 50 пикселей от верха стены)</li>
-                            <li>Левый отступ: 50% (чтобы центрировать крышу)</li>
-                            <li>Трансформация: translateX(-50%) (чтобы центрировать крышу по горизонтали)</li>
+                            <li>Ширина: 0</li>
+                            <li>Высота: 0</li>
+                            <li>Левая граница: 110px solid transparent</li>
+                            <li>Правая граница: 110px solid transparent</li>
+                            <li>Нижняя граница: 100px solid #A52A2A</li>
+                            <li>Позиционирование: absolute</li>
+                            <li>Верхний отступ: 50px</li>
+                            <li>Левый отступ: 50%</li>
+                            <li>Трансформация: translateX(-50%)</li>
                         </ul>
                         <button class="btn btn-secondary" onclick="showHint(3)">Показать помощь</button>
                         <button class="btn btn-secondary" onclick="hideHint(3)" style="display:none;">Скрыть помощь</button>
@@ -384,20 +387,17 @@
                 case 4:
                     instructions.innerHTML = `
                         <h2>Шаг 4: Установить дверь</h2>
-                        <p>Напишите HTML код для двери. Используйте элемент <code>&lt;div class="door"&gt;&lt;/div&gt; &lt;div class="doorknob"&gt;&lt;/div&gt;</code>.</p>
+                        <p>Напишите HTML код для двери. Используйте элемент <code>&lt;div class="door"&gt;&lt;/div&gt;</code>.</p>
                         <p>CSS должен содержать правила для:</p>
                         <ul>
-                            <li>Ширина: 60px (ширина двери)</li>
-                            <li>Высота: 100px (высота двери)</li>
-                            <li>Цвет фона: темно-коричневый (чтобы дверь была темно-коричневой)</li>
-                            <li>Позиционирование: absolute (чтобы закрепить дверь на стенах)</li>
-                            <li>Нижний отступ: 20px (чтобы дверь была внизу стены)</li>
-                            <li>Левый отступ: 50% (чтобы дверь была по центру стены)</li>
-                            <li>Трансформация: translateX(-50%) (чтобы скорректировать положение двери по центру)</li>
-                            <li
-
->Граница: 2px solid #000 (чтобы добавить границу)</li>
-                            <li>Ручка двери: ширина 10px, высота 10px, золотой цвет, круглая форма, позиционирование на двери</li>
+                            <li>Ширина: 60px</li>
+                            <li>Высота: 100px</li>
+                            <li>Цвет фона: темно-коричневый</li>
+                            <li>Позиционирование: absolute</li>
+                            <li>Нижний отступ: 20px</li>
+                            <li>Левый отступ: 50%</li>
+                            <li>Трансформация: translateX(-50%)</li>
+                            <li>Граница: 2px solid #000</li>
                         </ul>
                         <button class="btn btn-secondary" onclick="showHint(4)">Показать помощь</button>
                         <button class="btn btn-secondary" onclick="hideHint(4)" style="display:none;">Скрыть помощь</button>
@@ -410,20 +410,39 @@
     left: 50%;
     transform: translateX(-50%);
     border: 2px solid #000;
-}
-.doorknob {
+}</code></pre>
+                    `;
+                    break;
+                case 5:
+                    instructions.innerHTML = `
+                        <h2>Шаг 5: Добавить дверную ручку</h2>
+                        <p>Напишите HTML код для дверной ручки. Используйте элемент <code>&lt;div class="doorknob"&gt;&lt;/div&gt;</code>, вложенный внутри элемента двери.</p>
+                        <p>CSS должен содержать правила для:</p>
+                        <ul>
+                            <li>Ширина: 10px</li>
+                            <li>Высота: 10px</li>
+                            <li>Цвет фона: золотой</li>
+                            <li>Форма: круглая (border-radius: 50%)</li>
+                            <li>Позиционирование: абсолютное внутри двери</li>
+                            <li>Верхний отступ: 50%</li>
+                            <li>Левый отступ: 80%</li>
+                            <li>Трансформация: translate(-50%, -50%)</li>
+                        </ul>
+                        <button class="btn btn-secondary" onclick="showHint(5)">Показать помощь</button>
+                        <button class="btn btn-secondary" onclick="hideHint(5)" style="display:none;">Скрыть помощь</button>
+                        <pre id="hint5" class="hint"><code>.doorknob {
     width: 10px;
     height: 10px;
     background-color: #DAA520;
     border-radius: 50%;
     position: absolute;
-    top: 80%;
-    left: 400px;
-    transform: translateY(-50%);
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
 }</code></pre>
                     `;
                     break;
-                case 5:
+                case 6:
                     instructions.innerHTML = `
                         <h2>Поздравляем!</h2>
                         <p>Вы успешно построили дом!</p>
