@@ -170,8 +170,8 @@
             background-color: #DAA520;
             border-radius: 50%;
             position: absolute;
-            top: 50%;
-            left: 80%;
+            top: 80%;
+            left: 52%;
             transform: translate(-50%, -50%);
         }
     </style>
@@ -291,9 +291,9 @@
             const tasks = [
                 { name: 'foundation', htmlCondition: /class="foundation"/, cssCondition: /\.foundation\s*\{[^}]*background-color:\s*#8B4513[^}]*\}/ },
                 { name: 'walls', htmlCondition: /class="walls"/, cssCondition: /\.walls\s*\{[^}]*background-color:\s*#D3D3D3[^}]*border:\s*2px\s*solid\s*#000[^}]*\}/ },
-                { name: 'roof', htmlCondition: /class="roof"/, cssCondition: /\.roof\s*\{[^}]*border-bottom:\s*100px\s*solid\s*#A52A2A[^}]*\}/ },
+                { name: 'roof', htmlCondition: /class="roof"/, cssCondition: /\.roof\s*\{[^}]*border-bottom:\s*100px\s*solid\s*#A52A2A[^}]*position:\s*absolute[^}]*top:\s*55px[^}]*left:\s*50%[^}]*transform:\s*translateX\(-50%\)[^}]*\}/ },
                 { name: 'door', htmlCondition: /class="door"/, cssCondition: /\.door\s*\{[^}]*background-color:\s*#A52A2A[^}]*border:\s*2px\s*solid\s*#000[^}]*\}/ },
-                { name: 'doorknob', htmlCondition: /class="doorknob"/, cssCondition: /\.doorknob\s*\{[^}]*background-color:\s*#DAA520[^}]*border-radius:\s*50%[^}]*\}/ }
+                { name: 'doorknob', htmlCondition: /class="doorknob"/, cssCondition: /\.doorknob\s*\{[^}]*background-color:\s*#DAA520[^}]*border-radius:\s*50%[^}]*position:\s*absolute[^}]*top:\s*80%[^}]*left:\s*52%[^}]*transform:\s*translate\(-50%,\s*-50%\)[^}]*\}/ }
             ];
 
             let completed = true;
@@ -332,7 +332,7 @@
                         <ul>
                             <li>Ширина: 200px</li>
                             <li>Высота: 200px</li>
-                            <li>Цвет фона: светло-серый</li>
+                            <li>Цвет фона: светло-серый (HEX: #D3D3D3)</li>
                             <li>Позиционирование: absolute</li>
                             <li>Нижний отступ: 20px</li>
                             <li>Левый отступ: 50%</li>
@@ -392,7 +392,7 @@
                         <ul>
                             <li>Ширина: 60px</li>
                             <li>Высота: 100px</li>
-                            <li>Цвет фона: темно-коричневый</li>
+                            <li>Цвет фона: темно-коричневый (HEX: #A52A2A)</li>
                             <li>Позиционирование: absolute</li>
                             <li>Нижний отступ: 20px</li>
                             <li>Левый отступ: 50%</li>
@@ -421,11 +421,11 @@
                         <ul>
                             <li>Ширина: 10px</li>
                             <li>Высота: 10px</li>
-                            <li>Цвет фона: золотой</li>
+                            <li>Цвет фона: золотой (HEX: #DAA520)</li>
                             <li>Форма: круглая (border-radius: 50%)</li>
                             <li>Позиционирование: абсолютное внутри двери</li>
-                            <li>Верхний отступ: 50%</li>
-                            <li>Левый отступ: 80%</li>
+                            <li>Верхний отступ: 80%</li>
+                            <li>Левый отступ: 52%</li>
                             <li>Трансформация: translate(-50%, -50%)</li>
                         </ul>
                         <button class="btn btn-secondary" onclick="showHint(5)">Показать помощь</button>
@@ -436,8 +436,8 @@
     background-color: #DAA520;
     border-radius: 50%;
     position: absolute;
-    top: 50%;
-    left: 80%;
+    top: 80%;
+    left: 52%;
     transform: translate(-50%, -50%);
 }</code></pre>
                     `;
